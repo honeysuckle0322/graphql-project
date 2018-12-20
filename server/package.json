@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "movie api with graphql",
+  "main": "index.js",
+  "repository": "https://github.com/honeysuckle0322/graphql-project",
+  "author": "honeysuckle0322@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "graphql-yoga": "^1.16.7"
+  },
+  "scripts": {
+    "dev": "npx nodemon index"
+  }
+}
