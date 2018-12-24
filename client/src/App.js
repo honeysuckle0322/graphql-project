@@ -1,11 +1,36 @@
-import React, { Component } from 'react';
 
-class App extends Component {
+
+import React from 'react';
+import { HashRouter, Route } from 'react-router-dom';
+import { ApolloProvider } from 'react-apollo';
+import client from './apolloClient';
+
+// components
+import Home from './Home';
+import Detail from './Detail';
+
+class App extends React.Component {
     render() {
         return (
-            <div className="App" />
+            <ApolloProvider client={client}>
+                <HashRouter>
+                    <>
+                        <Route
+                            exact
+                            path={'/'}
+                            component={Home}
+                        />
+                        <Route
+                            path={'/details/:movieId'}
+                            component={Detail}
+                        />
+                        <Route />
+                    </>
+                </HashRouter>
+            </ApolloProvider>
         );
     }
-}
+};
 
 export default App;
+
